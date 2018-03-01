@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -26,20 +27,26 @@ public class IOFileManager {
     };
 
     // le del fichero  y  lo introduce en la matrix
-    public void ReadFromFile(){
-        boolean first = true;
-        int cont= 0;
+    public ArrayList<ArrayList<String>> ReadFromFile(){
+
+        ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
+
         try (Scanner scanner =  new Scanner(InputFilePath, ENCODING.name())){
 
             while (scanner.hasNextLine()){
 
-               // scanner.nextLine(
+                data.add(new ArrayList<>(Arrays.asList(scanner.nextLine().split(" "))));
+
+                //process each line in some way
 
             }
+
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return  data;
 
     }
     //inicializa la matriz tras leer la priemra linea

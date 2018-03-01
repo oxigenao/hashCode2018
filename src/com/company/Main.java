@@ -3,8 +3,16 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        System.out.println("Hola");
+
+        String inputFile ="/Users/pablo/IdeaProjects/HashCode2018/src/com/company/a_example.in";
+        String outputFile ="/Users/pablo/IdeaProjects/HashCode2018/src/com/company/a_example.out";
+        IOFileManager fileManager = new IOFileManager(inputFile, outputFile);
+        System.out.println(fileManager.ReadFromFile());
+
+
+        // Lista de pedidos
+        // Entorno
+
 
     }
 }

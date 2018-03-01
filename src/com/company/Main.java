@@ -8,6 +8,8 @@ public class Main {
         String inputFile ="/Users/pablo/IdeaProjects/HashCode2018/src/com/company/a_example.in";
         String outputFile ="/Users/pablo/IdeaProjects/HashCode2018/src/com/company/a_example.out";
         IOFileManager fileManager = new IOFileManager(inputFile, outputFile);
+
+
         System.out.println(fileManager.ReadFromFile());
 
 
